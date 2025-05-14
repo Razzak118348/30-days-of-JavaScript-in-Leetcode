@@ -5,6 +5,7 @@ var compose = function(functions) {
         // iterate from the end of the array to the beginning
         // and apply each function to the current value of xVal
         // this way we can compose the functions in reverse order
+        // so that the last function is applied first
         for(let i=functions.length-1;i>=0;i--){
             xVal=functions[i](xVal)
         }
